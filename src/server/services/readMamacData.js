@@ -47,6 +47,11 @@ async function readMamacData(meter) {
 			e.options = {ipAddress: meter.ipAddress};
 			throw e;
 		}
+		if (reading < 0) {
+			const e = Error(`CSV line ${line}: Meter reading ${reading} from ${meter.name} with id ${meter.id} has a negative reading`);
+			e.options = {ipAddress: meter.ipAddress};
+			throw e;
+		}
 		let startTs;
 		let endTs;
 		try {
