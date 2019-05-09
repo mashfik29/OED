@@ -11,6 +11,9 @@ export interface MeterDropDownProps {
 	updateSelectedMeter(meterID: number): UpdateImportMeterAction;
 }
 
+/**
+ * Contains the drop-down to select meters for which the reading is being uploaded.
+ */
 export default class MeterDropDownComponent extends React.Component<MeterDropDownProps, {}> {
 	constructor(props: MeterDropDownProps) {
 		super(props);

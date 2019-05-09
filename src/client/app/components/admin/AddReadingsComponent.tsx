@@ -20,6 +20,12 @@ interface AddReadingProps {
 
 type AddReadingsPropsWithIntl = AddReadingProps & InjectedIntlProps;
 
+
+/**
+ * Contains drop zone to add new reading files to OED.  When the file is uploaded it calls the fileprocessing API
+ * to add readings to the database.
+ */
+
 class AddReadingComponent extends React.Component<AddReadingsPropsWithIntl, {}> {
 	constructor(props: AddReadingsPropsWithIntl) {
 		super(props);

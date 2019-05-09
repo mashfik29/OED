@@ -21,7 +21,6 @@ class AddMetersComponent extends React.Component<AddMetersPropsWithIntl, {}> {
 		super(props);
 		this.handleMeterToImport = this.handleMeterToImport.bind(this);
 	}
-
 	public handleMeterToImport(files: File[]) {
 		const file = files[0];
 		const reader = new FileReader();
@@ -69,20 +68,20 @@ class AddMetersComponent extends React.Component<AddMetersPropsWithIntl, {}> {
 			paddingBottom: '5px',
 			display: 'inline'
 		};
-		const messages = defineMessages({ tipFormat: { id: 'tip.meters.csv.format' }});
-		const { formatMessage } = this.props.intl;
+		const messages = defineMessages({tipFormat: {id: 'tip.meters.csv.format'}});
+		const {formatMessage} = this.props.intl;
 
 		return (
 			<div>
 				<p style={titleStyle}>
-					<FormattedMessage id='add.new.meters' />
+					<FormattedMessage id='add.new.meters'/>
 				</p>
 				<TooltipHelpComponent
 					tip={formatMessage(messages.tipFormat)}
 				/>
 				<Dropzone accept='text/csv, application/vnd.ms-excel,' onDrop={this.handleMeterToImport}>
 					<div>
-						<FormattedMessage id='upload.meters.csv' />
+						<FormattedMessage id='upload.meters.csv'/>
 					</div>
 				</Dropzone>
 			</div>
