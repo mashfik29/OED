@@ -4,6 +4,10 @@
  * file, You can obtain one at http://mozilla.org/MPL/2.0/.
  */
 
+/**
+Calls the function to load new readings for Mamac meters.
+ */
+
 const Meter = require('../models/Meter');
 const readMamacData = require('./readMamacData');
 const updateMeters = require('./updateMeters');

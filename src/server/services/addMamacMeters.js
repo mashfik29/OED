@@ -2,6 +2,10 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
 
+/**
+This class uses the .xlsx file to add the meters and the first two elements that gets checked is the node and name.
+ */
+
 const path = require('path');
 const { log } = require('../log');
 const { insertMetersWrapper } = require('./readMamacMeters');
